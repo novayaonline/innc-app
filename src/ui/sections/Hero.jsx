@@ -1,5 +1,6 @@
 import styles from "./styles/hero.module.css"
 import imgMedicos from "../assets/img_1_hero.webp"
+import { BtnSchedule } from "../components/BtnSchedule"
 
 export const Hero = () => {
     return (
@@ -7,7 +8,7 @@ export const Hero = () => {
             <div className={styles.content_hero}>
                 <h1>Há mais de 20 anos cuidando de pessoas, fazendo parte da evolução da Neurologia e compartilhando conhecimento.</h1>
                 <h2>Há mais de 20 anos cuidando de pessoas, fazendo parte da evolução da Neurologia e compartilhando conhecimento.</h2>
-                <a href="#contato">Agende sua consulta</a>
+                <BtnSchedule />
             </div>
             <img src={imgMedicos} alt="Imagem Home" />
         </section>

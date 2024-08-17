@@ -5,12 +5,13 @@
     background-color: var(--c-white);
     display: grid;
     place-items: center;
+    z-index: 9;
 
     & .navbar_container {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 63rem;
+        width: 85rem;
 
         & > a > img {
             width: 200px;
@@ -26,6 +27,25 @@
             text-decoration: none;
             font-size: 1.2rem;
             font-family: var(--f-inter);
+            position: relative;
+            padding: 5px 10px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 0%;
+                height: 3px;
+                background: var(--cg-orange-to-orange);
+                bottom: 1px;
+                left: 50%;
+                transform: translateX(-50%);
+                transform-origin: center; 
+                transition: all .3s;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
         }
     } 
 }

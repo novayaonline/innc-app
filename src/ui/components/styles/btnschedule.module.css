@@ -1,0 +1,18 @@
+.btn {
+    width: 270px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background: var(--cg-orange-to-orange);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: var(--f-inter);
+    text-decoration: none;
+    color: var(--c-white);
+    font-size: 1.1rem;
+    transition: all .3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
