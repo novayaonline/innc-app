@@ -1,6 +1,6 @@
 .nav {
     width: 100%;
-    position: absolute;
+    position: fixed;
     padding: 10px;
     background-color: var(--c-white);
     display: grid;
@@ -33,18 +33,19 @@
             &::after {
                 position: absolute;
                 content: "";
-                width: 0%;
                 height: 3px;
                 background: var(--cg-orange-to-orange);
                 bottom: 1px;
                 left: 50%;
                 transform: translateX(-50%);
                 transform-origin: center; 
+                
                 transition: all .3s;
+                width: 0%;
             }
 
             &:hover::after {
-                width: 100%;
+                width: 90%;
             }
         }
     } 
