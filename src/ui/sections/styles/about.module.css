@@ -17,10 +17,46 @@
 }
 
 .about_data_box {
-    width: 450px;
+    width: 28rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 20px;
+
+    &>h2 {
+        font-family: var(--f-libre-baskerville);
+        text-transform: uppercase;
+    }
+
+    &>p {
+        font-family: var(--f-inter);
+        line-height: 1.5;
+    }
+
+    &>h3 {
+        font-family: var(--f-merriweather);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    &>div {
+        display: flex;
+        gap: 10px;
+        width: 21.5rem;
+
+        &>p {
+            font-family: var(--f-inter);
+            line-height: 1.5;
+        }
+
+        &>span {
+
+
+            &>img {
+                width: 25px;
+                object-fit: cover;
+            }
+        }
+    }
 }

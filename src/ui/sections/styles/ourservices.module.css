@@ -1,0 +1,130 @@
+.our_services_section {
+    height: 90vh;
+    background: var(--cg-orange-to-orange);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    & > h2 {
+        color: var(--c-white);
+        font-family: var(--f-libre-baskerville);
+        text-transform: uppercase;
+        position: relative;
+
+        &::after {
+            width: 110%;
+            height: 3px;
+            background-color: var(--c-white);
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+}
+
+.img_bg1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.img_bg2 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes rotacaoInfinita {
+    from {
+      transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+      transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.img_bg {
+    height: 700px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 6;
+}
+
+.container_itens1 {
+    z-index: 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+}
+
+.container_itens2 {
+    z-index: 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+}
+
+.card_services {
+    width: 300px;
+    height: 250px;
+    background-color: var(--c-white);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 30px;
+    transition: all .3s;
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    & > img {
+        object-fit: cover;
+        height: 60px;
+    }
+
+    & > p {
+        font-family: var(--f-merriweather);
+    }
+
+    & > a {
+        width: 100%;
+        text-align: center;
+        font-family: var(--f-inter);
+        color: var(--c-orange-heavy);
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 3px;
+            background: var(--cg-orange-to-orange);
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            transform-origin: center; 
+            
+            transition: all .3s;
+            width: 0%;
+        }
+
+        &:hover::after {
+            width: 40%;
+        }
+    }
+}

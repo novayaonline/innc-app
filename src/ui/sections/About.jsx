@@ -1,5 +1,6 @@
 import styles from "./styles/about.module.css"
 import img from "../assets/about_img.webp"
+import incon from "../assets/innc-icon.webp"
 
 export const About = () => {
     return (
@@ -10,11 +11,11 @@ export const About = () => {
                     <p>Somos uma clínica de neurologia especializada no diagnóstico e tratamento de distúrbios do sistema nervoso, com equipe altamente qualificada.</p>
                     <h3>Nossos serviços</h3>
                     <div>
-                        <span>i</span>
-                        <p>Oferecemos cuidados de excelência para pacientes com epilepsia, esclerose múltipla, Parkinson, Alzheimer, enxaquecas, AVC, neuropatias e doenças musculares.</p>
+                        <span> <img src={incon} alt="Icone" /> </span>
+                        <p>Oferecemos cuidados de excelência para pacientes com <strong> epilepsia, esclerose múltipla, Parkinson, Alzheimer, enxaquecas, AVC, neuropatias e doenças musculares.</strong></p>
                     </div>
                     <div>
-                        <span>i</span>
+                        <span> <img src={incon} alt="Icone" /> </span>
                         <p>Utilizamos tecnologias avançadas para realizar exames clínicos detalhados e testes neurológicos precisos.</p>
                     </div>
                 </div>
