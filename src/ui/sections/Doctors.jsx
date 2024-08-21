@@ -59,7 +59,7 @@ export const Doctors = () => {
                 >
                     {data.map((item, index) => (
                         <div className={styles.item_container_doctors} key={index}>
-                            <div>
+                            <div className={styles.data_doc}>
                                 <p className={styles.name}>{item.name}</p>
                                 <p className={styles.especiality}><strong>{item.especiality}</strong></p>
                                 <p className={styles.descrip}>{item.descrip}</p>
