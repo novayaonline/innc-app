@@ -56,7 +56,7 @@ export const Products = () => {
                     style={{ transform: `translateX(-${currentIdx * 100}%)` }}
                 >
                     {data.map((item, index) => (
-                        <div className={styles.item_container_doctors} key={index}>
+                        <div className={styles.item_container_products} key={index}>
                             <div className={styles.img_container}>    
                                 <img src={item.img} alt={item.name} />
                             </div>
