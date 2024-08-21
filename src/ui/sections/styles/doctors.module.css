@@ -23,33 +23,33 @@
     justify-content: center;
     min-width: 100%;
     height: 100%;
-
-    & > .data_doc {
-        height: 100%;
-        width: 500px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 20px;
-
-        & > .name {
-            font-family: var(--f-alex-brush);
-            font-size: 3.5rem;
-
-        }
-
-        & > .especiality {
-            font-family: var(--f-inter);
-        }
-
-        & > .descrip {
-            font-family: var(--f-inter);
-            
-        }
-    } 
 }
 
+.data_doc {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+
+    & > .name {
+        font-family: var(--f-alex-brush);
+        font-size: 3.5rem;
+
+    }
+
+    & > .especiality {
+        font-family: var(--f-inter);
+    }
+
+    & > .descrip {
+        font-family: var(--f-inter);
+        
+    }
+    
+}
 .btn_container {
     position: absolute;
     bottom: 10px;
