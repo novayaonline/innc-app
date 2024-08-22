@@ -48,8 +48,9 @@
         font-family: var(--f-inter);
         
     }
-    
+
 }
+
 .btn_container {
     position: absolute;
     bottom: 10px;
