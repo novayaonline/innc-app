@@ -1,0 +1,12 @@
+.gallery_2_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: var(--c-white);
+
+    & > img {
+        height: 400px;
+        width: 400px;
+    }
+}

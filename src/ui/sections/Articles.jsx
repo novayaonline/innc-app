@@ -53,6 +53,10 @@ const data = [
         name: "Dr. João Pereira",
         descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
         img: imgtemp
+    }, {
+        name: "Dr. João Pereira",
+        descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
+        img: imgtemp
     }
 ]
 

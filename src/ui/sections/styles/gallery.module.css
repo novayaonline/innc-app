@@ -1,0 +1,77 @@
+.gallery_section {
+    height: 70vh;
+    background-image: url("../../assets/gallery-bg.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    & > h2 {
+        width: 90%;
+        text-align: center;
+        max-width: 1000px;
+        color: #585858;
+    }
+}
+
+.div_btns {
+    position: relative;
+}
+
+.gallery_container {
+    overflow: hidden;
+}
+
+.slider_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 1260px;
+    transition: all .3s;
+    padding: 10px;
+
+    & > img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.btn_right {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    color: var(--c-orange-heavy);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    & > svg {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.btn_left {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    color: var(--c-orange-heavy);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    & > svg {
+        height: 100%;
+        width: 100%;
+    }
+}
