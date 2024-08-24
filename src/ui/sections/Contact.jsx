@@ -93,19 +93,25 @@ const Contact = () => {
                 <input
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className={formData.name && styles.not_empty}
                     placeholder="Nome"
                 />
                 <input
                     value={formData.emailOrWhatsApp}
                     onChange={(e) => setFormData({ ...formData, emailOrWhatsApp: e.target.value })}
+                    className={formData.emailOrWhatsApp && styles.not_empty}
                     placeholder="Email ou WhatsApp"
                 />
                 <textarea
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className={formData.message && styles.not_empty}
                     placeholder="Mensagem"
                 />
-                <button type="submit"> {textBTN} </button>
+                <button 
+                    type="submit"
+                    disabled={textBTN === "Enviando..." ? true : false}
+                > {textBTN} </button>
             </form>
         </section>
     )

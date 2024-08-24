@@ -78,11 +78,16 @@ form {
         font-weight: 600;
         transition: all .3s;
         cursor: pointer;
-        
+
         &:hover {
             color: var(--c-white);
             border-color: transparent;
             background: var(--cg-orange-to-orange);
         }
     }
+}
+
+.not_empty {
+    border-color: transparent;
+    outline: 1px solid var(--c-orange-heavy);
 }
