@@ -4,6 +4,7 @@
     justify-content: center;
     gap: 5px;
     background-color: var(--c-white);
+    overflow: hidden;
 
     & > img {
         height: 400px;
