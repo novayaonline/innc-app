@@ -1,7 +1,7 @@
 import { BtnSchedule } from "../components/BtnSchedule"
 import styles from "./styles/depoiments_section.module.css"
 
-export const Depoiments = () => {
+const Depoiments = () => {
 
     const RenderYTVid = ({id_yt}) => {
         return (
@@ -22,3 +22,5 @@ export const Depoiments = () => {
         </section>
     )
 }
+
+export default Depoiments

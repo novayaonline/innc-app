@@ -19,7 +19,7 @@ const data = [
     }
 ]
 
-export const Gallery_2 = () => {
+const Gallery_2 = () => {
     return (
         <section className={styles.gallery_2_section}>
             {data.map((item, index) => (
@@ -28,3 +28,5 @@ export const Gallery_2 = () => {
         </section>
     )
 }
+
+export default Gallery_2

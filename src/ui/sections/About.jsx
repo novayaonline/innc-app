@@ -2,7 +2,7 @@ import styles from "./styles/about.module.css"
 import img from "../assets/about_img.webp"
 import incon from "../assets/innc-icon.webp"
 
-export const About = () => {
+const About = () => {
     return (
         <section id="about" className={styles.about_section}>
             <div className={styles.about_data_container}>
@@ -24,3 +24,5 @@ export const About = () => {
         </section>
     )
 }
+
+export default About

@@ -30,7 +30,7 @@ const data = [
     }, 
 ]
 
-export const Products = () => {
+const Products = () => {
     const [currentIdx, setCurrentIdx] = useState(0)
 
     // Função para navegar à esquerda
@@ -100,3 +100,5 @@ export const Products = () => {
         </section>
     )
 }
+
+export default Products

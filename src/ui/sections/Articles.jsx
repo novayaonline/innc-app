@@ -60,7 +60,7 @@ const data = [
     }
 ]
 
-export const Articles = () => {
+const Articles = () => {
     const [currentIdx, setCurrentIdx] = useState(0);
     const itemsPerPage = 3; // Quantidade de itens por página
     const totalPages = Math.ceil(data.length / itemsPerPage); // Total de páginas
@@ -119,3 +119,5 @@ export const Articles = () => {
         </section>
     )
 }
+
+export default Articles

@@ -34,7 +34,7 @@ const data = {
     }
 }
 
-export const OurServices = () => {
+const OurServices = () => {
 
     const RenderCardServices = ({item}) => {
         return (
@@ -64,3 +64,5 @@ export const OurServices = () => {
         </section>
     )
 }
+
+export default OurServices

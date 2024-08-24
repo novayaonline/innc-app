@@ -90,3 +90,5 @@ export const Doctors = () => {
         </section>
     )
 }
+
+export default Doctors

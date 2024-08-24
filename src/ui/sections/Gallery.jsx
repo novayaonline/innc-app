@@ -21,7 +21,7 @@ const data = [
     }
 ]
 
-export const Gallery = () => {
+const Gallery = () => {
     const [currentIdx, setCurrentIdx] = useState(0)
     const itemsPerPage = 3 // Quantidade de itens por página
     const totalPages = Math.ceil(data.length / itemsPerPage) // Total de páginas
@@ -61,3 +61,5 @@ export const Gallery = () => {
         </section>
     )
 }
+
+export default Gallery
