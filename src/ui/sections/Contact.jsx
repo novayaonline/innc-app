@@ -82,9 +82,9 @@ const Contact = () => {
                 {data.map((item) => (
                     <>
                         {item.isLink ? (
-                            <a key={item.text} href={item.link} target="_blanck"> <span> {item.img} </span> {item.text} </a>
+                            <a className={styles.data_item} key={item.text} href={item.link} target="_blanck"> <span> {item.img} </span> {item.text} </a>
                         ) : (
-                            <p key={item.text} > <span> {item.img} </span> {item.text} </p>
+                            <p className={styles.data_item} key={item.text} > <span> {item.img} </span> {item.text} </p>
                         )}
                     </>
                 ))}
