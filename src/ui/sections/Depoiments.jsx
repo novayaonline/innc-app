@@ -1,14 +1,19 @@
 import { BtnSchedule } from "../components/BtnSchedule"
 import styles from "./styles/depoiments_section.module.css"
-import YouTube from "react-youtube"
 
 export const Depoiments = () => {
-    const opts = {
-        height: '290',
-        width: '440',
-        playerVars: {
-            autoplay: 0,
-        }
+
+    const RenderYTVideo = ({videoId}) => {
+        return (
+            <iframe width="440" height="290" src={`https://www.youtube.com/embed/${videoId}?si=jPIrF8hF04pTNdoV`} 
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+            >    
+            </iframe>
+        )
     }
 
     return(
@@ -17,8 +22,8 @@ export const Depoiments = () => {
             <h3>GARANTIMOS OS MELHORES RESULTADOS AOS NOSSOS PACIENTES!</h3>
             <h4>Confira o depoimento de nossos pacientes, realizamos o tratamento mais moderno e funcional da atualidade, agende sua consulta para conhecer mais.</h4>
             <div className={styles.yt_container}>
-                <YouTube videoId="1DnSiznUrVI" opts={opts} />
-                <YouTube videoId="1DnSiznUrVI" opts={opts} />                
+                <RenderYTVideo videoId="1DnSiznUrVI" />
+                <RenderYTVideo videoId="1DnSiznUrVI" />                
             </div>
             <BtnSchedule />
         </section >

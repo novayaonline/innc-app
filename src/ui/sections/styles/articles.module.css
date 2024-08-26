@@ -135,3 +135,13 @@
 .indicator.active {
     background-color: var(--c-orange-heavy); /* Cor ativa */
 }
+
+@media (max-width: 900px) {
+    .articles_section {
+        
+
+    }
+    .slider_wrapper {
+       
+    }
+}

@@ -10,7 +10,7 @@ export const Hero = () => {
                 <h2>Há mais de 20 anos cuidando de pessoas, fazendo parte da evolução da Neurologia e compartilhando conhecimento.</h2>
                 <BtnSchedule />
             </div>
-            <img src={imgMedicos} alt="Imagem Home" />
+            <img className={styles.img_hero} src={imgMedicos} alt="Imagem Home" />
         </section>
     )
 }

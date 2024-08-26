@@ -14,7 +14,6 @@
     height: 100%;
     overflow: hidden;
     justify-content: center; /* Centraliza o conteúdo inicialmente */
-
 }
 
 .item_container_doctors {
@@ -97,4 +96,38 @@
 
 .indicator.active {
     background-color: var(--c-orange-heavy); /* Cor ativa */
+}
+
+@media (max-width: 900px) {
+
+    .doctors_section {
+        height: auto;
+        padding: 50px 0 70px 0;
+    }
+
+    .data_doc {
+        width: 350px;
+    }
+
+    .item_container_doctors {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        gap: 30px;
+        text-align: center;
+        & > img {
+            width: 300px;
+        }
+
+        & > div {
+            width: 350px;
+            display: grid;
+            place-items: center;
+        }
+    }
+    .especiality {
+        width: 100%;
+        text-align: center;
+    }
 }

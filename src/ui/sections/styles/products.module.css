@@ -163,3 +163,21 @@
     }
 
 }
+
+@media (max-width: 900px) {
+    .products_section {
+        height: auto;
+    }
+
+    .products_container {
+        
+        & > .img_container {
+        width: 350px;
+    }
+    }
+
+    .item_container_products {
+        flex-direction: column;
+    }
+
+}

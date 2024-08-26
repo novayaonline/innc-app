@@ -26,6 +26,7 @@
 
 body {
   background: var(--cg-orange-to-orange);
+  overflow-x: hidden;
 }
 
 .temp {

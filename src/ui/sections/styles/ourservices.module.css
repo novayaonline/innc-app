@@ -128,3 +128,24 @@
         }
     }
 }
+
+@media (max-width: 900px) {
+    .our_services_section {
+        padding: 50px 0;
+        height: auto;
+        gap: 30px;
+        
+        & > img {
+            display: none;
+        }
+    }
+
+    .container_itens1, .container_itens2 {
+        width: 95%;
+        gap: 5px;
+    }
+
+    .card_services {
+        height: 300px;
+    }
+}

@@ -30,3 +30,22 @@
         font-size: 1.1rem;
     }
 }
+
+@media (max-width: 900px) {
+    .hero_section {
+        height: auto;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .content_hero {
+        width: 95%;
+        margin-right: 0px;
+
+    }
+
+    .img_hero {
+        margin: 0 auto;
+        width: 95%;
+    }
+}

@@ -63,7 +63,9 @@ export const Doctors = () => {
                                 <p className={styles.name}>{item.name}</p>
                                 <p className={styles.especiality}><strong>{item.especiality}</strong></p>
                                 <p className={styles.descrip}>{item.descrip}</p>
-                                <BtnSchedule />
+                                <div>
+                                    <BtnSchedule />
+                                </div>
                             </div>
                             <img src={item.img} alt={item.name} />
                         </div>
