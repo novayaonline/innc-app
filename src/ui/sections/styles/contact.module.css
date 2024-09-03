@@ -92,7 +92,7 @@ form {
     outline: 1px solid var(--c-orange-heavy);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 85.62rem) {
     .contact_section {
         height: auto;
         padding: 50px;

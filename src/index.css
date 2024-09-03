@@ -23,13 +23,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  background: var(--cg-orange-to-orange);
-  overflow-x: hidden;
-}
-
-.temp {
-  height: 500px;
-  background-color: #000;
-}

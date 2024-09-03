@@ -40,8 +40,8 @@ const formDataInitialState = {
 const Contact = () => {
     const [formData, setFormData] = useState(formDataInitialState)
     const [textBTN, setTextBTN] = useState("Enviar")
-
-    const handleSubmit = (event) => {
+    
+    function handleSubmit(event) {
         event.preventDefault()
 
         if (!formData.name || !formData.emailOrWhatsApp || !formData.message) {
@@ -71,7 +71,7 @@ const Contact = () => {
         }
     }
 
-    const clearForm = () => {
+    function clearForm() {
         setFormData(formDataInitialState)
     }
 

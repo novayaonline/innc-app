@@ -11,3 +11,16 @@
         width: 400px;
     }
 }
+
+@media (max-width: 85.62rem) {
+    .gallery_2_section {
+        height: auto;
+        flex-wrap: wrap;
+
+        & > img {
+            height: 150px;
+            width: 90%;
+            object-fit: cover;
+        }
+    }
+}

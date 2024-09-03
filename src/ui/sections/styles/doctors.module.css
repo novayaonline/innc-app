@@ -98,7 +98,7 @@
     background-color: var(--c-orange-heavy); /* Cor ativa */
 }
 
-@media (max-width: 900px) {
+@media (max-width: 85.62rem) {
 
     .doctors_section {
         height: auto;

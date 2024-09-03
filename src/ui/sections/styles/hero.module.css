@@ -31,7 +31,7 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 85.62rem) {
     .hero_section {
         height: auto;
         flex-direction: column;

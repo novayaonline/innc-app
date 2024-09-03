@@ -9,6 +9,7 @@
     justify-content: center;
     gap: 50px;
     position: relative;
+    overflow-x: hidden;
 
     & > h2 {
         color: var(--c-black);
@@ -144,4 +145,34 @@
     .slider_wrapper {
        
     }
+}
+
+
+@media (max-width: 85.62rem) {
+    .articles_section {
+        height: auto;
+        padding: 50px 0;
+    }
+    
+    .slider_wrapper {
+        width: 95%;
+        margin: 0 auto;
+        flex-direction: column;
+        height: 550px;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    
+.article_item {
+    min-height: 400px;
+    width: 400px;
+}
+
+   .btn_container {
+        display: none;
+   }
 }
