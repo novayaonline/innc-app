@@ -166,13 +166,13 @@
         }
     }
 
-    
-.article_item {
-    min-height: 400px;
-    width: 400px;
-}
+    .article_item {
+        min-height: 400px;
+        min-width: 100%;
+        width: 100%;
+    }
 
-   .btn_container {
-        display: none;
-   }
+    .btn_container {
+            display: none;
+    }
 }

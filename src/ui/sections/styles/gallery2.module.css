@@ -1,14 +1,21 @@
 .gallery_2_section {
+    width: 99.5%;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 5px;
     background-color: var(--c-white);
     overflow: hidden;
-
+    
     & > img {
+        flex: 1 1 auto;
+        width: 100px;
         height: 400px;
-        width: 400px;
+        object-fit: cover;
+        transition: all .3s;
+
+        &:hover {
+            width: 400px;
+        }
     }
 }
 
@@ -21,6 +28,10 @@
             height: 150px;
             width: 90%;
             object-fit: cover;
+
+            &:hover {
+                height: 400px;
+            }
         }
     }
 }
