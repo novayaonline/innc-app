@@ -1,4 +1,3 @@
-import imgtemp from "../assets/img1-temp.png"
 import styles from "./styles/doctors.module.css"
 import { BtnSchedule } from "../components/BtnSchedule"
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io"

@@ -1,4 +1,3 @@
-import imgtemp from "../assets/img1-temp.png"
 import styles from "./styles/products.module.css"
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io"
 import { useState, useEffect } from "react"
