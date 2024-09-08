@@ -2,48 +2,30 @@ import imgtemp from "../assets/img1-temp.png"
 import styles from "./styles/doctors.module.css"
 import { BtnSchedule } from "../components/BtnSchedule"
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io"
-import { useState } from "react"
-
-const data = [
-    {
-        name: "Dr. João Pereira",
-        especiality: "Especialista em neurologia",
-        descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
-        img: imgtemp
-    }, {
-        name: "Dr. João Pereira",
-        especiality: "Especialista em neurologia",
-        descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
-        img: imgtemp
-    }, {
-        name: "Dr. João Pereira",
-        especiality: "Especialista em neurologia",
-        descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
-        img: imgtemp
-    }, {
-        name: "Dr. João Pereira",
-        especiality: "Especialista em neurologia",
-        descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
-        img: imgtemp
-    }, {
-        name: "Dr. João Pereira",
-        especiality: "Especialista em neurologia",
-        descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
-        img: imgtemp
-    }
-]
+import { useState, useEffect } from "react"
+import { fetchGetData } from "../../lib/fetchGetData"
+const collectionName = "doctors"
 
 export const Doctors = () => {
     const [currentIdx, setCurrentIdx] = useState(0)
+    const [docsData, setDocsData] = useState([])
+
+    useEffect(() => {
+        async function fetchData() {
+            let data = await fetchGetData(collectionName)
+            setDocsData(data)
+        }
+        fetchData()
+    }, [])
 
     // Função para navegar à esquerda
     function handlePrevClick() {
-        setCurrentIdx((prevIdx) => (prevIdx === 0 ? data.length - 1 : prevIdx - 1))
+        setCurrentIdx((prevIdx) => (prevIdx === 0 ? docsData.length - 1 : prevIdx - 1))
     }
 
     // Função para navegar à direita
     function handleNextClick() {
-        setCurrentIdx((prevIdx) => (prevIdx === data.length - 1 ? 0 : prevIdx + 1))
+        setCurrentIdx((prevIdx) => (prevIdx === docsData.length - 1 ? 0 : prevIdx + 1))
     }
 
     function handleIndicatorClick(index) {
@@ -57,7 +39,7 @@ export const Doctors = () => {
                     className={styles.slider_wrapper}
                     style={{ transform: `translateX(-${currentIdx * 100}%)` }}
                 >
-                    {data.map((item, index) => (
+                    {docsData.map((item, index) => (
                         <div className={styles.item_container_doctors} key={index}>
                             <div className={styles.data_doc}>
                                 <p className={styles.name}>{item.name}</p>
@@ -77,7 +59,7 @@ export const Doctors = () => {
                     <IoIosArrowDropleft />
                 </button>
                 <div className={styles.indicators_container}>
-                    {data.map((_, index) => (
+                    {docsData.map((_, index) => (
                         <button
                             key={index}
                             className={`${styles.indicator} ${currentIdx === index ? styles.active : ""}`}

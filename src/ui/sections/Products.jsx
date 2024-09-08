@@ -1,46 +1,33 @@
 import imgtemp from "../assets/img1-temp.png"
 import styles from "./styles/products.module.css"
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { BtnSchedule } from "../components/BtnSchedule"
 import { FaClock } from "react-icons/fa"
 import { IoLogoWhatsapp } from "react-icons/io"
-
-const data = [
-    {
-        name: "Dr. João Pereira",
-        especiality: "Especialista em neurologia",
-        descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
-        img: imgtemp
-    }, {
-        name: "Dr. João Pereira",
-        especiality: "Especialista em neurologia",
-        descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
-        img: imgtemp
-    }, {
-        name: "Dr. João Pereira",
-        especiality: "Especialista em neurologia",
-        descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
-        img: imgtemp
-    }, {
-        name: "Dr. João Pereira",
-        especiality: "Especialista em neurologia",
-        descrip: "Dr. João Pereira é neurologista adulto e infantil, diretor do Instituto de Neurociência do ES. Com milhares de atendimentos ao longo de mais de 20 anos de experiência.",
-        img: imgtemp
-    }, 
-]
+import { fetchGetData } from "../../lib/fetchGetData"
+const collectionName = "products"
 
 const Products = () => {
     const [currentIdx, setCurrentIdx] = useState(0)
+    const [prodsData, setProdsData] = useState([])
+
+    useEffect(() => {
+        async function fetchData() {
+            let data = await fetchGetData(collectionName)
+            setProdsData(data)
+        }
+        fetchData()
+    }, [])
 
     // Função para navegar à esquerda
     function handlePrevClick() {
-        setCurrentIdx((prevIdx) => (prevIdx === 0 ? data.length - 1 : prevIdx - 1))
+        setCurrentIdx((prevIdx) => (prevIdx === 0 ? prodsData.length - 1 : prevIdx - 1))
     }
 
     // Função para navegar à direita
     function handleNextClick() {
-        setCurrentIdx((prevIdx) => (prevIdx === data.length - 1 ? 0 : prevIdx + 1))
+        setCurrentIdx((prevIdx) => (prevIdx === prodsData.length - 1 ? 0 : prevIdx + 1))
     }
 
     function handleIndicatorClick(index) {
@@ -55,7 +42,7 @@ const Products = () => {
                     className={styles.slider_wrapper}
                     style={{ transform: `translateX(-${currentIdx * 100}%)` }}
                 >
-                    {data.map((item, index) => (
+                    {prodsData.map((item, index) => (
                         <div className={styles.item_container_products} key={index}>
                             <div className={styles.img_container}>    
                                 <img src={item.img} alt={item.name} />
@@ -85,7 +72,7 @@ const Products = () => {
                     <IoIosArrowDropleft />
                 </button>
                 <div className={styles.indicators_container}>
-                    {data.map((_, index) => (
+                    {prodsData.map((_, index) => (
                         <button
                             key={index}
                             className={`${styles.indicator} ${currentIdx === index ? styles.active : ""}`}
