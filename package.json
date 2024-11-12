@@ -1,5 +1,6 @@
 {
   "name": "innc-app",
+  "homepage": "https://innc.med.br/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "env-cmd -f .env react-scripts start",
     "build": "env-cmd -f .env react-scripts build",
     "test": "env-cmd -f .env react-scripts test",
@@ -35,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "env-cmd": "^10.1.0"
+    "env-cmd": "^10.1.0",
+    "gh-pages": "^6.2.0"
   }
 }
