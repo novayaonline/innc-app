@@ -1,6 +1,6 @@
 {
   "name": "innc-app",
-  "homepage": "https://innc.med.br/",
+  "homepage": "http://innc.med.br/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
