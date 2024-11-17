@@ -4,7 +4,7 @@ import incon from "../assets/innc-icon.webp"
 
 const About = () => {
     return (
-        <section id="about" className={styles.about_section}>
+        <section id="sobre" className={styles.about_section}>
             <div className={styles.about_data_container}>
                 <div className={styles.about_data_box}>
                     <h2>Sobre nós</h2>

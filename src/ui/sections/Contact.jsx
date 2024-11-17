@@ -76,7 +76,7 @@ const Contact = () => {
     }
 
     return (
-        <section className={styles.contact_section}>
+        <section id="contato" className={styles.contact_section}>
             <div className={styles.data_container}>
                 <h2>Estamos prontos para lhe atender</h2>
                 {data.map((item) => (

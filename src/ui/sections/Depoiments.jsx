@@ -17,7 +17,7 @@ export const Depoiments = () => {
     }
 
     return(
-        <section id = "depoiments_section" className = { styles.depoiments_section } >
+        <section id = "depoimentos" className = { styles.depoiments_section } >
             <h2>Depoimentos</h2>
             <h3>GARANTIMOS OS MELHORES RESULTADOS AOS NOSSOS PACIENTES!</h3>
             <h4>Confira o depoimento de nossos pacientes, realizamos o tratamento mais moderno e funcional da atualidade, agende sua consulta para conhecer mais.</h4>

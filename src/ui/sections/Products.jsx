@@ -34,7 +34,7 @@ const Products = () => {
     }
 
     return (
-        <section id="doctors_section" className={styles.products_section}>
+        <section id="produtos" className={styles.products_section}>
             <h2>Produtos</h2>
             <div className={styles.products_container}>
                 <div

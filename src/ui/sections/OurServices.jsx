@@ -48,7 +48,7 @@ const OurServices = () => {
     }
 
     return (
-        <section id="our_services" className={styles.our_services_section}>
+        <section id="servicos" className={styles.our_services_section}>
             <h2> Nossos Serviços </h2>
             <div className={styles.container_itens1}>
                 <RenderCardServices item={data.item1} />

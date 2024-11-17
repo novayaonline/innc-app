@@ -80,7 +80,7 @@ const Articles = () => {
     }
 
     return (
-        <section id="articles" className={styles.articles_section}>
+        <section id="artigos" className={styles.articles_section}>
             <h2> Artigos </h2>
             <div className={styles.articles_container}>
                 <div 
